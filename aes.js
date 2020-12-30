@@ -25,7 +25,7 @@ function decrypt(base64String) {
     return deciphered;
 }
 
-const input = 'all this is very clear to you?';
+const input = 'Minha mensagem a ser criptografada';
 const encrypted = encrypt(input);
 console.log('Encrypted text: ' + encrypted);
 const decrypted = decrypt(encrypted);
