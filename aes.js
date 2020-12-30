@@ -25,8 +25,8 @@ function decrypt(base64String) {
     return deciphered;
 }
 
-const input = 'Minha mensagem a ser criptografada';
-const encrypted = encrypt(input);
-console.log('Encrypted text: ' + encrypted);
-const decrypted = decrypt(encrypted);
-console.log('Decrypted text: ' + decrypted);
+
+exports.runAes = function(messageToEncrypt){
+    const encrypted = encrypt(messageToEncrypt);
+    const decrypted = decrypt(encrypted);
+}

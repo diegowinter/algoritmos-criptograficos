@@ -26,17 +26,7 @@ const decrypt = (message,hash,salt) => {
     return false;
 };
 
-const generatedHash = encrypt(messageToEncrypt);
-console.log(messageToEncrypt,'foi transformado em:', generatedHash.hashedPassword);
-console.log('')
-console.log('Verificando se a criptografia é valida:');
-console.log('')
-console.log(messageToEncrypt,'com', generatedHash);
-console.log('')
-console.log(decrypt(messageToEncrypt,generatedHash.hashedPassword,generatedHash.salt));
-console.log('');
-console.log('A seguinte criptografia, deve estar falsa:');
-console.log('');
-const newSalt = 'd827b71e3131';
-console.log(messageToEncrypt,'com', generatedHash.hashedPassword, 'e novo salt', newSalt);
-console.log(decrypt(messageToEncrypt,generatedHash.hashedPassword,newSalt))
+exports.runHash = function(messageToEncrypt){
+  const generatedHash = encrypt(messageToEncrypt);
+  decrypt(messageToEncrypt,generatedHash.hashedPassword,generatedHash.salt)
+}

@@ -44,9 +44,7 @@ const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 1024,
 });
 
-showPublicAndPrivateKeys();
-const input = 'Minha mensagem a ser criptografada';
-const encrypted = encrypt(input);
-console.log('Encypted text: ', encrypted.toString("base64"));
-const decrypted = decrypt(encrypted);
-console.log('Decrypted text: ', decrypted.toString());
+exports.runRsa = function(messageToEncrypt){
+  const encrypted = encrypt(messageToEncrypt);
+  const decrypted = decrypt(encrypted);
+}
