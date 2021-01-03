@@ -25,7 +25,6 @@ function decrypt(base64String) {
     return deciphered;
 }
 
-
 exports.runAes = function(messageToEncrypt){
     const encrypted = encrypt(messageToEncrypt);
     const decrypted = decrypt(encrypted);

@@ -41,7 +41,7 @@ function showPublicAndPrivateKeys() {
 }
 
 const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
-    modulusLength: 1024,
+    modulusLength: 4096,
 });
 
 exports.runRsa = function(messageToEncrypt){
